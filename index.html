@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Transcription Assistant</title>
+        <link href="./assets/css/style.css" rel="stylesheet" /> 
+        <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="side-nav"></div>
+        <!--Start Content Wrapper-->
+        <div class="content-wrapper">
+    
+        <div class="page-header">
+            <div class="page-title">
+                <h3>Transcription Assistant</h3>
+            </div>
+            <div class="page-controls">
+                <div class="control">
+                    <a href="#">
+                        <span>Full Screen</span>
+                        <span>
+                            <img src="./assets/images/fullscreen.svg" alt="">
+                        </span>
+                    </a>
+                </div>
+                <div class="control">
+                    <a href="#">
+                        <span>Preview</span>
+                        <span>
+                            <img src="./assets/images/preview.svg" alt="">
+                        </span>
+                    </a>
+                </div>
+                <div class="control">
+                    <a href="#">
+                        <span>Submit</span>
+                        <span>
+                            <img src="./assets/images/submit.svg" alt="">
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--End Page Header-->
+        
+    
+        <div class="page-content">
+            <div class="card">
+                <div class="card-header">
+                    <h4 id="transcript-title">VIRTUAL_KSMHGC_COURT_NO_1_Hon_Fred_Ochieng_20200617-SPLIT._000000-011504_</h4>
+                </div>
+                <div class="card-body" id="transcript-wrapper">
+                                
+                 <div class="hidden" id="single-entry-template"  >
+                    <hr>
+                    <div class="my-entry" id="my-entry" >
+                        <div class="single-entry">
+                            <input id="select-speaker" class="adjust select-speaker" list="Speaker" placeholder="Speaker Name" name="speaker"/>
+                            <datalist id="Speaker">
+                                <div id="options"></div>
+                            </datalist>
+                            <div class="speaker_statement" contenteditable id="speaker_statement" placeholder="Type Here..."></div>
+                        </div>
+                    </div> 
+                  
+                 </div>                  
+                   
+            </div>
+            <div class="card-footer">
+                
+                <div id="initial-content">
+                    <a href="#" class="btn-custom green" id="start_transcribing">Start Transcribing</a>
+                    <!-- <a class="btn-custom green" data-toggle="modal" data-target="#ModalSpeakers">
+                        Manage Speakers
+                    </a> -->
+                </div> 
+
+                <div id="final-content">
+                    <div class="col-left">
+                       <div>
+                            <a class="btn-custom outline" data-toggle="modal" data-target="#ModalSpeakers">
+                                Manage Speakers
+                            </a>
+                       </div>
+                    </div>
+                    <div class="col-right">
+                        <div>
+                            <a href="#" class="btn-custom green" id="btn_new_entry">
+                                Next Speaker
+                            </a>
+                        </div>
+                       <div>
+                            <p>
+                                <span>*</span>
+                                (Use keyboard shortcut <span>SHIFT+ENTER</span> to go to the next speaker)
+                            </p>
+                       </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+  
+    <!--Start Modal Manage Speakers-->
+    <div class="modal fade" id="ModalSpeakers" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <img src="./assets/images/close.svg" alt="">
+                    </button>
+                </div>
+                <div>
+                    <h5 class="modal-title" id="exampleModalLongTitle">Speakers Management</h5>
+                </div>
+            </div>
+                <div class="modal-body">
+                    <div class="content">
+                       <div class="single-speaker">
+                           <div class="speaker-name">
+                                Silvester Kiptoo
+                           </div>
+                           <span class="separator"></span>
+
+                           <div class="control">
+                                <button class="btn">
+                                    <img src="./assets/edit.svg" alt="">
+                                </button>
+                           </div>
+                           <span class="separator"></span>
+
+                           <div class="control">
+                                <button class="btn">
+                                    <img src="./assets/delete.svg" alt="">
+                                </button>
+                           </div>
+                       </div>
+                       <div class="single-speaker">
+                        <div class="speaker-name">
+                             Silvester Kiptoo
+                        </div>
+                        <span class="separator"></span>
+
+                        <div class="control">
+                             <button class="btn">
+                                 <img src="./assets/edit.svg" alt="">
+                             </button>
+                        </div>
+                        <span class="separator"></span>
+
+                        <div class="control">
+                             <button class="btn">
+                                 <img src="./assets/delete.svg" alt="">
+                             </button>
+                        </div>
+                    </div>
+                    <div class="single-speaker">
+                        <div class="speaker-name">
+                             Silvester Kiptoo
+                        </div>
+                        <span class="separator"></span>
+
+                        <div class="control">
+                             <button class="btn">
+                                 <img src="./assets/edit.svg" alt="">
+                             </button>
+                        </div>
+                        <span class="separator"></span>
+
+                        <div class="control">
+                             <button class="btn">
+                                 <img src="./assets/delete.svg" alt="">
+                             </button>
+                        </div>
+                    </div>
+                    <div class="single-speaker">
+                        <div class="speaker-name">
+                             Silvester Kiptoo
+                        </div>
+                        <span class="separator"></span>
+
+                        <div class="control">
+                             <button class="btn">
+                                 <img src="./assets/edit.svg" alt="">
+                             </button>
+                        </div>
+                        <span class="separator"></span>
+
+                        <div class="control">
+                             <button class="btn">
+                                 <img src="./assets/delete.svg" alt="">
+                             </button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                   <div class="content">
+                    <div class="add-speaker">
+                        <button class="btn clean">
+                            <img src="./assets/images/add.svg">
+                            Add Speaker
+                        </button>
+                    </div>
+
+                    <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button> -->
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <!--End Modal Manage Speakers-->
+
+    </div>    
+    <!-- End Content Wrapper -->
+
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/custom.js"></script>
+</body>
+</html>

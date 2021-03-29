@@ -1,0 +1,337 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    background-color: #F2F4F8;
+    display: flex;
+}
+
+.side-nav{
+    width: 150px;
+    height: 100vh;
+    background-color: #1540AD;
+}
+
+.content-wrapper{
+    padding: 0 20px;
+    width: 100%;
+    /* margin: auto; */
+    margin-top: 50px;
+    background-color: #F2F4F8;
+    /* border: 2px solid grey; */
+}
+/* --------------Start Common Styles------------- */
+.btn-custom{
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 8px 36px;
+    border-radius: 5px;
+}
+.btn-custom:hover{
+    text-decoration: none;
+}
+
+.btn-custom.blue, #final-content .btn-custom.outline:hover{
+    color: white;
+    background: #1540AD;
+    border: 2px solid #1540AD;
+}
+#final-content .btn-custom.outline, .btn-custom.blue:hover{
+    border: 2px solid #1540AD;
+    color: #1540AD;
+    background: white;
+}
+/* #final-content a{
+    color: #1440AC;
+} */
+.btn-custom.green{
+    border: 2px solid #40BD32;
+    color: #40BD32;
+    background: white;
+}
+.btn-custom.green:hover{
+    color: white;
+    background: #40BD32;
+    border: 2px solid #40BD32;
+}
+#single-entry{
+    display: none;
+}
+.single-entry{
+    width: 100%;
+}
+.hidden{
+    display: none;
+}
+/* --------------End Common Styles------------- */
+
+/* --------------Start Page Header------------- */
+.page-header{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #C4C4C4;
+}
+
+.page-header .page-title h3{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #333333;
+}
+
+.page-header .page-controls{
+    display: flex;
+}
+
+.page-header .page-controls .control{
+    padding: 0 10px 10px 10px;
+    border-right: 1px solid #C4C4C4;
+}
+
+.page-header .page-controls .control:last-child{
+    border-right: none;
+}
+
+.page-header .page-controls .control a{
+    font-weight: normal;
+}
+
+/* --------------End Page Header------------- */
+
+/* ------------Start Transcript Card------------- */
+.page-content{
+    margin-top: 20px;
+}
+
+.page-content .card{
+    background: #1440AC;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    padding: 1.5px;
+}
+
+.page-content .card .card-header{
+    width: 100%;
+    padding: 20px 0;
+    background: transparent;
+}
+
+.page-content .card .card-header h4{
+    text-align: center;
+    font-size: 18px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+
+
+
+
+.page-content .card .card-body{
+    display: none;
+    width: 100%;
+    max-height: 55vh;
+    overflow-y: scroll;
+    background: white;
+    border-right: 10px #1440AC;
+    border-left: 10px #1440AC;
+    border-bottom: #1440AC;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.page-content .card .card-body .single-entry{
+    display: flex;
+    padding: 10px;
+    border-bottom: 1px solid #C4C4C4;
+}
+.page-content .card .card-body .single-entry:last-child{
+    border-bottom: none;
+}
+
+.page-content .card .card-body .single-entry .select-speaker{
+    padding: 10px 20px;
+    border: none;
+    background: #F6F6F6;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-right: 20px;
+    height: 40px;
+    min-width: 160px;
+    max-width: 250px;
+}
+.page-content .card .card-body .single-entry .select-speaker:focus{
+    border: 15px solid red;
+}
+
+.page-content .card .card-body .single-entry .speaker_statement{
+    width: 100%;
+    min-height: 80px;
+    background: #F7F7F7;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    padding: 3px 10px;
+}
+
+.page-content .card .card-body .single-entry .speaker_statement:focus{
+    border:1px solid red;
+}
+
+.page-content .card .card-body .single-entry .speaker_statement[contenteditable][placeholder]:empty:before {
+    content: attr(placeholder);
+    color: gray;
+    background-color: transparent;
+  }
+
+.page-content .card .card-footer{
+    width: 100%;
+    padding: 20px 0;
+    background: white;
+    border-right: 10px #1440AC;
+    border-left: 10px #1440AC;
+    border-bottom: #1440AC;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.page-content .card .card-footer #final-content{
+    display: none;
+    justify-content: space-around;
+}
+
+.page-content .card .card-footer #final-content .col-left{
+    display: flex;
+    justify-content: center;
+}
+
+.page-content .card .card-footer #final-content .col-right{
+    flex-direction: column;
+    display: flex;
+}
+.page-content .card .card-footer #initial-content{
+    display: flex;
+    justify-content: space-around;
+}
+
+.page-content .card .card-footer p {
+
+    margin: 0;
+    margin-top: 12px;
+    color: #6C717C;
+    font-weight: bold;
+    font-size: 14px;
+}
+.page-content .card .card-footer p span{
+    color: red;
+}
+/* ------------End Transcript Card------------- */
+
+.my-entry{
+ display:flex;
+ border-bottom: 1;
+}
+
+.speaker{
+
+}
+
+.speech{
+    width: 100%;
+    word-wrap: break-word;
+    
+}
+
+
+/* ==========Modal SPeakers============= */
+#ModalSpeakers{
+    width: 100%;;
+    background: rgba(196, 196, 196, 0.05);
+    backdrop-filter: blur(4px);
+}
+
+#ModalSpeakers .modal-dialog .modal-content{
+    /* background: #1440AC; */
+    box-shadow: 9px 7px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    border: none;
+}
+#ModalSpeakers .modal-dialog .modal-content .modal-header{
+    background-color: #1440AC;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+#ModalSpeakers .modal-dialog .modal-content .modal-header h5{
+    /* font-family: Roboto; */
+    font-style: normal;
+    font-weight: bold;
+    line-height: 21px;
+    /* text-transform: uppercase; */
+    color: #FFFFFF;
+    font-size: 25px;
+} 
+#ModalSpeakers .modal-dialog .modal-content .modal-header .modal-title{
+    margin: 25px;
+    text-align: center;
+}
+#ModalSpeakers .modal-dialog .modal-content .modal-header .close{
+    color: white;
+    padding: 0;
+}
+
+
+#ModalSpeakers .modal-dialog .modal-content .modal-body{
+    background-color: #1440AC;
+    padding: 0 4px;
+    margin-top: -15px;
+}
+
+#ModalSpeakers .modal-dialog .modal-content .modal-body .content{
+    background-color: white;
+    height: 200px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    text-align: center;
+}
+
+#ModalSpeakers .modal-dialog .modal-content .modal-body .content .single-speaker{
+    display: flex;
+    justify-content: center;
+    margin: 5px 10px;
+}
+#ModalSpeakers .modal-dialog .modal-content .modal-body .content .single-speaker .speaker-name{
+    background: #F6F6F6;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#ModalSpeakers .modal-dialog .modal-content .modal-body .content .single-speaker .control{
+
+}
+
+#ModalSpeakers .modal-dialog .modal-content .modal-body .content .single-speaker .separator{
+    width: 25px;
+    height: 1px;
+    background: #000;
+}
+
+#ModalSpeakers .modal-dialog .modal-content .modal-footer{
+    background-color: #1440AC;
+    padding: 0 4px 4px 4px;
+    margin-top: -5px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+#ModalSpeakers .modal-dialog .modal-content .modal-footer .content{
+    background-color: white;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    width: 100%;
+    padding: 2px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+#ModalSpeakers .modal-dialog .modal-content .modal-body .content .single-speaker .speaker-name{width: 50%;text-align: left;}
