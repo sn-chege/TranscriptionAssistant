@@ -66,6 +66,9 @@ body{
 .hidden{
     display: none;
 }
+button, button:focus{
+    outline: none;
+}
 /* --------------End Common Styles------------- */
 
 /* --------------Start Page Header------------- */
@@ -164,20 +167,26 @@ body{
     max-width: 250px;
 }
 .page-content .card .card-body .single-entry .select-speaker:focus{
-    border: 15px solid red;
+    /* border: 15px solid red; */
+    outline: none ;
+
 }
 
 .page-content .card .card-body .single-entry .speaker_statement{
     width: 100%;
     min-height: 80px;
     background: #F7F7F7;
-    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 6px;
-    padding: 3px 10px;
+    padding: 10px 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.page-content .card .card-body .single-entry .speaker_statement.active{
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .page-content .card .card-body .single-entry .speaker_statement:focus{
-    border:1px solid red;
+    /* border: 15px solid red; */
+    outline: none ;
 }
 
 .page-content .card .card-body .single-entry .speaker_statement[contenteditable][placeholder]:empty:before {
@@ -300,6 +309,7 @@ body{
     display: flex;
     justify-content: center;
     margin: 5px 10px;
+    align-items: baseline;
 }
 #ModalSpeakers .modal-dialog .modal-content .modal-body .content .single-speaker .speaker-name{
     background: #F6F6F6;
@@ -307,11 +317,24 @@ body{
 }
 
 #ModalSpeakers .modal-dialog .modal-content .modal-body .content .single-speaker .control{
-
+ 
 }
 
+#ModalSpeakers .modal-dialog .modal-content .modal-body .content .single-speaker .control .btn-outline{
+    border: 0.5px solid #1440AC;
+    background: white;
+    padding: 6px 12px;
+    color: #1440AC;
+    border-radius: 6px;
+    font-size: 12px;
+}
+#ModalSpeakers .modal-dialog .modal-content .modal-body .content .single-speaker .control .btn-outline:hover{
+    transition: .4s;
+    background: #1440AC;
+    color: white;
+}
 #ModalSpeakers .modal-dialog .modal-content .modal-body .content .single-speaker .separator{
-    width: 25px;
+    width: 30px;
     height: 1px;
     background: #000;
 }
@@ -334,4 +357,4 @@ body{
     justify-content: space-around;
 }
 
-#ModalSpeakers .modal-dialog .modal-content .modal-body .content .single-speaker .speaker-name{width: 50%;text-align: left;}
+#ModalSpeakers .modal-dialog .modal-content .modal-body .content .single-speaker .speaker-name{padding: 10px;text-align: left;margin: 0;width: 1;}

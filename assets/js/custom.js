@@ -38,12 +38,12 @@ $(document).on('paste','.speaker_statement',function(e){
     document.execCommand("insertHTML", false, text);//insert text manually
 });
 
-$(document).on('focus','#speaker_statement',function(e){
-    this.classList.Add('is-focused');
+$(document).on('focus','.speaker_statement',function(e){
+    this.classList.add('active');
 });
 
-$(document).on('blur','#speaker_statement',function(e){
-    this.classList.Remove('is-focused');
+$(document).on('blur','.speaker_statement',function(e){
+    this.classList.remove('active');
 });
 
 //====================  Functions  =================//
