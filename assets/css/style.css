@@ -1,3 +1,4 @@
+/* ==========Start General/Common Styles========== */
 *{
     margin: 0 auto;
     padding: 0;
@@ -23,7 +24,7 @@ body{
     background-color: #F2F4F8;
     /* border: 2px solid grey; */
 }
-/* --------------Start Common Styles------------- */
+
 .btn-custom{
     text-transform: uppercase;
     font-weight: bold;
@@ -44,9 +45,7 @@ body{
     color: #1540AD;
     background: white;
 }
-/* #final-content a{
-    color: #1440AC;
-} */
+
 .btn-custom.green{
     border: 2px solid #40BD32;
     color: #40BD32;
@@ -69,9 +68,9 @@ body{
 button, button:focus{
     outline: none;
 }
-/* --------------End Common Styles------------- */
+/* ==========End General/Common Styles========== */
 
-/* --------------Start Page Header------------- */
+/* ==========Start Page Header========== */
 .page-header{
     display: flex;
     justify-content: space-between;
@@ -101,9 +100,9 @@ button, button:focus{
     font-weight: normal;
 }
 
-/* --------------End Page Header------------- */
+/* ==========End Page Header========== */
 
-/* ------------Start Transcript Card------------- */
+/* ==========Start Transcript Card========== */
 .page-content{
     margin-top: 20px;
 }
@@ -130,9 +129,6 @@ button, button:focus{
     line-height: 21px;
     color: #FFFFFF;
 }
-
-
-
 
 .page-content .card .card-body{
     display: none;
@@ -236,25 +232,9 @@ button, button:focus{
 .page-content .card .card-footer p span{
     color: red;
 }
-/* ------------End Transcript Card------------- */
+/* ==========End Transcript Card========== */
 
-.my-entry{
- display:flex;
- border-bottom: 1;
-}
-
-.speaker{
-
-}
-
-.speech{
-    width: 100%;
-    word-wrap: break-word;
-    
-}
-
-
-/* ==========Modal SPeakers============= */
+/* ========== Start Modal Speakers============= */
 #ModalSpeakers{
     width: 100%;;
     background: rgba(196, 196, 196, 0.05);
@@ -290,7 +270,6 @@ button, button:focus{
     padding: 0;
 }
 
-
 #ModalSpeakers .modal-dialog .modal-content .modal-body{
     background-color: #1440AC;
     padding: 0 4px;
@@ -303,6 +282,7 @@ button, button:focus{
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
     text-align: center;
+    padding: 10px;
 }
 
 #ModalSpeakers .modal-dialog .modal-content .modal-body .content .single-speaker{
@@ -314,10 +294,14 @@ button, button:focus{
 #ModalSpeakers .modal-dialog .modal-content .modal-body .content .single-speaker .speaker-name{
     background: #F6F6F6;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 10px;
+    text-align: left;
+    margin: 0;
+    width: 80%;
 }
 
 #ModalSpeakers .modal-dialog .modal-content .modal-body .content .single-speaker .control{
- 
+    margin: 0;
 }
 
 #ModalSpeakers .modal-dialog .modal-content .modal-body .content .single-speaker .control .btn-outline{
@@ -325,18 +309,31 @@ button, button:focus{
     background: white;
     padding: 6px 12px;
     color: #1440AC;
-    border-radius: 6px;
+    border-radius: 5px;
     font-size: 12px;
 }
+
 #ModalSpeakers .modal-dialog .modal-content .modal-body .content .single-speaker .control .btn-outline:hover{
     transition: .4s;
     background: #1440AC;
     color: white;
 }
+#ModalSpeakers .modal-dialog .modal-content .modal-body .content .single-speaker .control .btn-icon{
+    border: 1px solid #1440AC;
+    border-radius: 50%;
+    color: #1440AC;
+}
+#ModalSpeakers .modal-dialog .modal-content .modal-body .content .single-speaker .control .btn-icon:hover{
+    background: #1440AC;
+    color: white;
+    transition: 0.4s;
+}
+
 #ModalSpeakers .modal-dialog .modal-content .modal-body .content .single-speaker .separator{
     width: 30px;
     height: 1px;
-    background: #000;
+    background: #1440AC ;
+    margin: 0;
 }
 
 #ModalSpeakers .modal-dialog .modal-content .modal-footer{
@@ -352,9 +349,20 @@ button, button:focus{
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
     width: 100%;
-    padding: 2px 0;
+    padding: 10px 0;
     display: flex;
     justify-content: space-around;
 }
 
-#ModalSpeakers .modal-dialog .modal-content .modal-body .content .single-speaker .speaker-name{padding: 10px;text-align: left;margin: 0;width: 1;}
+#ModalSpeakers .modal-dialog .modal-content .modal-footer .content .add-speaker .btn.custom-clean{
+    background: white;
+    padding: 6px 12px;
+    border-radius: 5px;
+}
+
+#ModalSpeakers .modal-dialog .modal-content .modal-footer .content .add-speaker .btn.custom-clean:hover{
+    background:  #1440AC;
+    color: white;
+    transition: 0.4s;
+}
+/* ========== End Modal Speakers============= */
